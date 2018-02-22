@@ -25,10 +25,10 @@
                 <a class="nav-link" href="#">Inici <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="test">Enllaç 1</a>
+                <a class="nav-link" href="/rest/api/v1/restaurants"> API Rest</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="test">Enllaç 2</a>
+                <a class="nav-link" href="/restUse.html"> AJAX </a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

@@ -8,7 +8,7 @@
 <h1 id="myTitle">Rest mola y lo sabes!</h1>
 <table width="100%">
     <tr>
-        <td ><div class="myUsers"></div></td>
+        <td ><div class="myRests"></div></td>
         <td><div class="myUsers"></div></td>
     </tr>
 </table>
@@ -17,18 +17,25 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 
-<!-- AJAX. TODO: Hace el redireccionamiento pero no saca los datos -->
+<!-- AJAX. Abrirlo con Chrome, Firefox no funciona TODO: Dejarlo guapo -->
 <script>
     $(document).ready(function () {
         console.log($("#myTitle").html());
-        $.get("/restaurants", function (data) {
+        $.get("/rest/api/v1/restaurants", function (data) {
             console.log(data);
-            var contentHtml = "<h2>Mensajes en el sistema</h2>";
+            var contentHtml = "<h2>AJAX</h2>";
             $.each(data, function( index, value ) {
-                var cell= "<div>Name:"+value.content+"</div>";
+                var cell=
+                    "<p>"+value.name+"</p>" +
+                    "<p>"+value.address+"</p>"+
+                    "<p>"+value.type+"</p>"+
+                    "<p>"+value.mitjana+"</p>"+
+                    "<p>"+value.numero+"</p>" +
+                    "<hr>"
+                ;
                 contentHtml += cell;
             });
-            $(".myUsers").html(contentHtml);
+            $(".myRests").html(contentHtml);
             console.log("Load was performed.");
         });
     });
