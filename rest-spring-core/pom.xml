@@ -30,5 +30,5 @@
             <artifactId>log4j-over-slf4j</artifactId>
         </dependency>
     </dependencies>
-    
+    <!-- https://github.com/albertoSoto/openshift-spring-rest/blob/master/rest-spring-core/pom.xml -->
 </project>
