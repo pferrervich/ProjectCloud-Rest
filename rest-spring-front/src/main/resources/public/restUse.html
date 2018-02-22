@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Prueba rest</title>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<h1 id="myTitle">Rest mola y lo sabes!</h1>
-<table width="100%">
-    <tr>
-        <td ><div class="myRests"></div></td>
-        <td><div class="myUsers"></div></td>
-    </tr>
-</table>
+
+
+<div class="jumbotron text-center">
+    <h1>Bon profit!</h1>
+    <p>Aquets son els millors restaurants que pots trobar a Mallorca</p>
+    <p>Ajax rulez!</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="myRests"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 <script
         src="http://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 
-<!-- AJAX. Abrirlo con Chrome, Firefox no funciona TODO: Dejarlo guapo -->
-<script>
-    $(document).ready(function () {
-        console.log($("#myTitle").html());
-        $.get("/rest/api/v1/restaurants", function (data) {
-            console.log(data);
-            var contentHtml = "<h2>AJAX</h2>";
-            $.each(data, function( index, value ) {
-                var cell=
-                    "<p>"+value.name+"</p>" +
-                    "<p>"+value.address+"</p>"+
-                    "<p>"+value.type+"</p>"+
-                    "<p>"+value.mitjana+"</p>"+
-                    "<p>"+value.numero+"</p>" +
-                    "<hr>"
-                ;
-                contentHtml += cell;
+    <script>
+        $(document).ready(function () {
+            console.log($("#myTitle").html());
+            $.get("/rest/api/v1/restaurants", function (data) {
+                console.log(data);
+                var contentHtml = "";
+                $.each(data, function( index, value ) {
+                    var cell=
+                        "<h3>"+value.name+"</h3>" +
+                        "<p> Web: "+
+                            "<a href='" + value.website + "'>" + value.website +" </a>" +
+                        "</p>"+
+                        "<p>Direccion: "+value.address+"</p>"+
+                        "<p>Tipo: "+value.type+"</p>"+
+                        "<p>Nota media: "+value.mitjana+"</p>"+
+                        "<p>Telefon: "+value.numero+"</p>" +
+                        "<hr>"
+                    ;
+                    contentHtml += cell;
+                });
+                $(".myRests").html(contentHtml);
+                console.log("Load was performed.");
             });
-            $(".myRests").html(contentHtml);
-            console.log("Load was performed.");
         });
-    });
-</script>
+    </script>
+
 </body>
 </html>
