@@ -21,7 +21,6 @@ public class ApiRestController {
     private final AtomicLong counter = new AtomicLong();
 
 
-
     @RequestMapping(path = "/restaurants",method = RequestMethod.GET)
     public List<Restaurant> list() {
         ReadDB readDB = new ReadDB();
