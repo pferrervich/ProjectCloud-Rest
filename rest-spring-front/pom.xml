@@ -12,6 +12,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <dependencies>
+        <!-- Starts Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -22,20 +23,24 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- Testing module Spring -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- FreeMarker -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
+        <!-- JSONPath-->
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- Spring Security & config-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
@@ -44,12 +49,14 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
         </dependency>
+        <!-- Core module dependency -->
         <dependency>
             <groupId>com.learningjava.rest.spring</groupId>
             <artifactId>rest-spring-core</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
+    <!-- Allows Spring Boot build -->
     <build>
         <plugins>
             <plugin>

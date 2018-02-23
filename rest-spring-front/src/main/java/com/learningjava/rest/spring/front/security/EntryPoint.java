@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Autenthication of Spring Security
+ */
 
 public class EntryPoint extends BasicAuthenticationEntryPoint {
 

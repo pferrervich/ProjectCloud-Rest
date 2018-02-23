@@ -13,6 +13,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase para el mapeo de los parametros de la base de datos con los Beans
+ * @param <T>
+ */
+
 public class ResultSetMapper<T> {
     @SuppressWarnings("unchecked")
     public List<T> mapResultSetToObject(ResultSet rs, Class outputClass) {

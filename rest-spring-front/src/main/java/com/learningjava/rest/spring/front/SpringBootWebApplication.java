@@ -6,6 +6,10 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * Starts SpringBoot
+ */
+
 @SpringBootApplication
 public class SpringBootWebApplication extends SpringBootServletInitializer {
     @Override

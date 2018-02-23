@@ -10,9 +10,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Optional;
 
+/**
+ * Maps the login page to "login", and gets the FreeMarker template.
+ */
+
 @Controller
 public class LoginController {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

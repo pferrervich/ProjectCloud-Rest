@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Maps the startpage to ROOT "/"
+ */
+
 @Controller
 public class HomeController {
     @RequestMapping("/")

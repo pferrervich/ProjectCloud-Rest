@@ -12,7 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-
+/**
+ * REST controller that maps the API on the specified route: /rest/api/v1
+ */
 @RestController
 @RequestMapping(path = "/rest/api/v1")
 public class ApiRestController {
