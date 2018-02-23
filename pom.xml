@@ -34,11 +34,7 @@
                         <configuration>
                             <outputDirectory>target</outputDirectory>
                             <warName>ROOT</warName>
-<<<<<<< HEAD
-
-=======
-                                 <failOnMissingWebXml>false</failOnMissingWebXml>
->>>>>>> 5922aa68e200ce965c5cfbfe459bf2d03330b92a
+                            <failOnMissingWebXml>false</failOnMissingWebXml>
                         </configuration>
                     </plugin>
                 </plugins>
