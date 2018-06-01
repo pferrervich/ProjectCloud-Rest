@@ -8,11 +8,11 @@ import java.util.List;
 import java.util.function.Function;
 
 /**
- * Llegeix la base de dades que està ubicada a la IP indicada "35.205.41.45:1521"
+ * Llegeix la base de dades que està ubicada a la IP indicada "35.180.32.114:1521"
  */
 public class ReadDB {
     private static final String DRIVER = "oracle.jdbc.driver.OracleDriver";
-    private static final String THIN_URL = "jdbc:oracle:thin:@35.205.41.45:1521:XE";
+    private static final String THIN_URL = "jdbc:oracle:thin:@35.180.32.114:1521:XE";
     private static final String USER = "usuari";
     private static final String PASSWORD = "usuari";
 
@@ -77,8 +77,8 @@ public class ReadDB {
     public static Restaurant readRestaurantInfo(String id) {
         Restaurant restaurant = null;
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@35.205.41.45:1521:XE", "usuari", "usuari");
+            Class.forName(DRIVER);
+            Connection con = DriverManager.getConnection(THIN_URL, USER, PASSWORD);
             PreparedStatement stmt = con.prepareStatement("SELECT R.RES_CODI,R.RES_NOM,R.RES_ADRECA,R.RES_WEB,R.RES_TELEFON,R.RES_URL_IMG,R.RES_MITJANA, TR.TRS_DESCRIPCIO " +
                     "FROM RESTAURANTS R,TRESTAURANTS TR WHERE TR.TRS_CODI=R.RES_TRS_CODI AND R.RES_CODI='" + id + "'");
             // Aquí feim una Query directament a la base de dades:
