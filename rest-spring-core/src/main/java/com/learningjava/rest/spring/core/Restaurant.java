@@ -2,8 +2,6 @@ package com.learningjava.rest.spring.core;
 
 // Classe Restaurant
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.util.ArrayList;
@@ -59,12 +57,7 @@ public class Restaurant {
     public String getMitjana() {
         return mitjana;
     }
-
-
-
-
-
-
+    
 
     // Setters;
 
@@ -97,11 +90,6 @@ public class Restaurant {
     public void setMitjana(String mitjana) {
         this.mitjana = mitjana;
     }
-
-
-
-
-
 
 
 }
