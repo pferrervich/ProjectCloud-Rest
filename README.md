@@ -32,6 +32,8 @@ This is the class UML diagram of the project. Class diagrams are one of the mos
 
 ## Deploy links:
 
+User: Admin, Password: 123
+
 HTTPS:
 
 https://myhttps-project-cloud.1d35.starter-us-east-1.openshiftapps.com/
